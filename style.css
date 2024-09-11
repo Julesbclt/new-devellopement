@@ -36,7 +36,7 @@ ul li {
 
 /* Style de base pour les liens, si tu en ajoutes plus tard */
 a {
-    color: #4CAF50;
+    color: white;
     text-decoration: none;
 }
 
@@ -59,41 +59,139 @@ nav {
     height: auto;
 }
 
-/* Style pour les liens de navigation */
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: flex;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
-/* Style pour rendre la navigation responsive */
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
     .logo {
         margin-bottom: 10px;
     }
+     /* Style pour la barre de navigation */
+     nav {
+        background-color: #333;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Style pour le logo */
+    .logo img {
+        width: 50px; /* Ajuster la taille du logo */
+        height: auto;
+    }
+
+
+        .logo {
+            margin-bottom: 10px;
+        }
+
+        /* On fait en sorte que chaque élément contienne sa marge interne avec box-sizing et on retire les traits qui sont par défaut sur les liens */
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  /* On modernise notre balise de navigation avec une petite ombre. On mets tous les éléments du menu les uns bien à côté des autres avec flexbox (display: flex) */
+  nav {
+    background-color: #fff;
+    padding: 0 20px;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    position: relative;
+    float: left;
+  }
+  
+  /* On stylise chaque élément */
+  .nav-item {
+    color: #83818c;
+    font-family: arial, sans-serif;
+    padding: 20px;
+    margin: 0 6px;
+    position: relative;
+  }
+  
+  /* Ici on met juste un petit élément avant chaque élément pour le rendre plus beau visuellement */
+  .nav-item:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    background-color: #dfe2ea;
+    height: 5px;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    left: 0;
+    transition: .3s;
+  }
+  
+  /* Avec les dernières nouveautés de CSS, on peut changer les propriétés des éléments selon des conditions avec not */
+  .nav-item:not(.is-active):hover:before {
+    bottom: 0;
+  }
+  .nav-item:not(.is-active):hover {
+    color: #333;
+  }
+  
+  /* Stylisons notre indicateur */
+  .nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    transition: .4s;
+    border-radius: 8px 8px 0 0;
+  }
+
+  /* Style pour la section avec image de fond */
+.image-background {
+    position: relative;
+    background-image: url('background-image.jpg'); /* Remplace par le chemin de ton image */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Ajuste la hauteur comme tu le souhaites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-overlay {
+    position: absolute;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajoute un fond semi-transparent pour une meilleure lisibilité */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-overlay h2 {
+    font-size: 2.5rem;
+}
+
+.text-overlay p {
+    font-size: 1.2rem;
+}
+
+/* Style de base du bouton */
+.custom-button {
+    background-color: #4ad3f2; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 15px 30px; /* Espacement interne (padding) */
+    font-size: 16px; /* Taille du texte */
+    font-family: 'Arial', sans-serif; /* Police */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Pointeur de souris */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation lors du hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Effet au survol (hover) */
+.custom-button:hover {
+    background-color: #4ad3f2; /* Changement de couleur au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+/* Effet lors du clic */
+.custom-button:active {
+    transform: scale(0.95); /* Réduction de taille pour simuler un effet de pression */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduction de l'ombre */
+

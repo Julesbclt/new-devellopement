@@ -10,36 +10,38 @@
         <header>
             <h1>Bienvenue sur mon site dans lequel vous apprendrez les bases du HTML</h1>
         </header>
-    <main>
         <nav>
             <div class="logo">
                 <a href="index.html">
                     <img src="html.png" alt="Logo">
                 </a>
             </div>
-                <ul>
-                    <li>Introduction au HTML</li>
-                    <li>Les balises de base</li>
-                    <li>Les listes en HTML</li>
-                    <li>Ajouter du style avec CSS</li>
-                </ul>
+            <nav>
+                <a href="Index.html" class="nav-item is-active">Home</a>
+                <a href="Introduction.html" class="nav-item">Introduction a HTML</a>
+                <a href="#" class="nav-item">Testimonials</a>
+                <a href="#" class="nav-item">Blog</a>
+                <a href="#" class="nav-item">Contact</a>
+              </nav>
         </nav>
-        <p>Ceci est un exemple de page HTML. Nous allons y ajouter quelques paragraphes et une liste non ordonnée.</p>
+    <main>
+        <section class="image-background">
+            <div class="text-overlay">
+                <h2>Explorez le monde du HTML</h2>
+                <button id="btn" class="custom-button">Cliquer pour decouvrir</button>
+            </div>
+        </section>
+
+        
+        <p id="titre">Ceci est un exemple de page HTML. Nous allons y ajouter quelques paragraphes et une liste non ordonnée.</p>
 
         <p>Voici quelques points que nous aborderons :</p>
-
-        <ul>
-            <li>Introduction au HTML</li>
-            <li>Les balises de base</li>
-            <li>Les listes en HTML</li>
-            <li>Ajouter du style avec CSS</li>
-        </ul>
 
     </main>
     
     <footer>
         <p>...</p>
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
